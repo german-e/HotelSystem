@@ -61,7 +61,7 @@ namespace HotelGestSystem.Presentation.Desktop.UserControls
 
         private void CardRoom_Click(object sender, EventArgs e)
         {
-            MenuContextualRoom menu = new MenuContextualRoom();
+            MenuContextualRoom menu = new MenuContextualRoom(RoomStatus);
             menu.ShowDialog();
         }
     }
