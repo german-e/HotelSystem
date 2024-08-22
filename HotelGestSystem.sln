@@ -1,0 +1,72 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.34928.147
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.Presentacion", "1.Presentacion", "{B7307B44-981D-407D-B4FC-5DE72A186417}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.Aplicacion", "2.Aplicacion", "{DE1085C8-1774-4878-90EE-1F9DC83B832F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.Domain", "3.Domain", "{9A293ADD-DB8D-461B-97F6-CA43C1755D0E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.Data", "4.Data", "{7FC7467A-E1E1-4B6B-9637-CF88842D5B04}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.1.Desktop", "1.1.Desktop", "{A0C5D81F-9E6E-4A87-A510-2FF1490EF016}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelGestSystem.Presentation.Desktop", "HotelGestSystem.Presentation.Desktop\HotelGestSystem.Presentation.Desktop.csproj", "{EB1FB10D-09AB-4AFD-B812-EC4A46BDC34E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.1.Receptionist", "3.1.Receptionist", "{0A558EC5-C753-4FC3-96D6-EA18DFC48CFB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.2.Admin", "3.2.Admin", "{421E2344-FA6B-4B89-89BA-F78243661D5C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelGestSystem.Domain.Receptionist", "HotelGestSystem.Domain.Receptionist\HotelGestSystem.Domain.Receptionist.csproj", "{FFECF6D6-0FA9-45BD-A30E-D4CA957D0B95}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelGestSystem.Domain.Admin", "HotelGestSystem.Domain.Admin\HotelGestSystem.Domain.Admin.csproj", "{83A1ACD2-57A5-4DEB-BDC4-267542A90FAA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.1.SqlServer", "4.1.SqlServer", "{3CAB3473-2145-4697-9D20-EC7EF9B2F8D0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.1.Sqlite", "4.1.Sqlite", "{D42A8C21-4970-4A0F-BA83-E14E414BDBA8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelGestSystem.Aplication", "HotelGestSystem.Aplication\HotelGestSystem.Aplication.csproj", "{90910B03-20FC-4DE1-9354-E17D75762C9C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EB1FB10D-09AB-4AFD-B812-EC4A46BDC34E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB1FB10D-09AB-4AFD-B812-EC4A46BDC34E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB1FB10D-09AB-4AFD-B812-EC4A46BDC34E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB1FB10D-09AB-4AFD-B812-EC4A46BDC34E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFECF6D6-0FA9-45BD-A30E-D4CA957D0B95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFECF6D6-0FA9-45BD-A30E-D4CA957D0B95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFECF6D6-0FA9-45BD-A30E-D4CA957D0B95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFECF6D6-0FA9-45BD-A30E-D4CA957D0B95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83A1ACD2-57A5-4DEB-BDC4-267542A90FAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83A1ACD2-57A5-4DEB-BDC4-267542A90FAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83A1ACD2-57A5-4DEB-BDC4-267542A90FAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83A1ACD2-57A5-4DEB-BDC4-267542A90FAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90910B03-20FC-4DE1-9354-E17D75762C9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90910B03-20FC-4DE1-9354-E17D75762C9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90910B03-20FC-4DE1-9354-E17D75762C9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90910B03-20FC-4DE1-9354-E17D75762C9C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A0C5D81F-9E6E-4A87-A510-2FF1490EF016} = {B7307B44-981D-407D-B4FC-5DE72A186417}
+		{EB1FB10D-09AB-4AFD-B812-EC4A46BDC34E} = {A0C5D81F-9E6E-4A87-A510-2FF1490EF016}
+		{0A558EC5-C753-4FC3-96D6-EA18DFC48CFB} = {9A293ADD-DB8D-461B-97F6-CA43C1755D0E}
+		{421E2344-FA6B-4B89-89BA-F78243661D5C} = {9A293ADD-DB8D-461B-97F6-CA43C1755D0E}
+		{FFECF6D6-0FA9-45BD-A30E-D4CA957D0B95} = {0A558EC5-C753-4FC3-96D6-EA18DFC48CFB}
+		{83A1ACD2-57A5-4DEB-BDC4-267542A90FAA} = {421E2344-FA6B-4B89-89BA-F78243661D5C}
+		{3CAB3473-2145-4697-9D20-EC7EF9B2F8D0} = {7FC7467A-E1E1-4B6B-9637-CF88842D5B04}
+		{D42A8C21-4970-4A0F-BA83-E14E414BDBA8} = {7FC7467A-E1E1-4B6B-9637-CF88842D5B04}
+		{90910B03-20FC-4DE1-9354-E17D75762C9C} = {DE1085C8-1774-4878-90EE-1F9DC83B832F}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {98ECCB0A-6956-4423-97C0-E5E44D826F34}
+	EndGlobalSection
+EndGlobal
