@@ -16,6 +16,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\HotelGestSystem.Aplication\HotelGestSystem.Aplication.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="Images\Icons\room_empty_black.png" />
     <Resource Include="Images\Icons\room_empty_green.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

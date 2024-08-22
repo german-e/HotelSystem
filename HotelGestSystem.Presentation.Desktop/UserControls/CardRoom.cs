@@ -1,4 +1,5 @@
 ﻿using HotelGestSystem.Presentation.Desktop.Enums;
+using HotelGestSystem.Presentation.Desktop.Forms.Utils;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -32,7 +33,7 @@ namespace HotelGestSystem.Presentation.Desktop.UserControls
 
         private void CardRoom_Load(object sender, EventArgs e)
         {
-            
+
 
 
             switch (RoomStatus)
@@ -56,6 +57,12 @@ namespace HotelGestSystem.Presentation.Desktop.UserControls
             picRoomIcon.Image = Icon;
 
 
+        }
+
+        private void CardRoom_Click(object sender, EventArgs e)
+        {
+            MenuContextualRoom menu = new MenuContextualRoom();
+            menu.ShowDialog();
         }
     }
 }

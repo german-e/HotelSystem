@@ -100,6 +100,7 @@
             Name = "CardRoom";
             Size = new Size(113, 66);
             Load += CardRoom_Load;
+            Click += CardRoom_Click;
             ((System.ComponentModel.ISupportInitialize)picRoomIcon).EndInit();
             panelStatus.ResumeLayout(false);
             ResumeLayout(false);
