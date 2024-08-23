@@ -74,9 +74,9 @@
             // panelContainerOptions
             // 
             panelContainerOptions.FlowDirection = FlowDirection.TopDown;
-            panelContainerOptions.Location = new Point(15, 45);
+            panelContainerOptions.Location = new Point(12, 45);
             panelContainerOptions.Name = "panelContainerOptions";
-            panelContainerOptions.Size = new Size(167, 103);
+            panelContainerOptions.Size = new Size(170, 103);
             panelContainerOptions.TabIndex = 1;
             // 
             // MenuContextualRoom

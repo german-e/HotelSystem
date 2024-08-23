@@ -31,6 +31,9 @@ namespace HotelGestSystem.Presentation.Desktop.Forms.Utils
                 case RoomStatus.Occupied:
                     Opciones.AddRange(new string[] { "Agregar Servicio", "Cambiar Habitacion", "Check-out" });
                     break;
+                case RoomStatus.Vacancy:
+                    Opciones.AddRange(["Reservar", "Cambiar Estado"]);
+                    break;
             }
 
             Opciones.ForEach(opc =>
