@@ -1,4 +1,5 @@
-﻿using HotelGestSystem.Domain.Receptionist.States;
+﻿using HotelGestSystem.Domain.Receptionist.Contracts;
+using HotelGestSystem.Domain.Receptionist.States;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,8 +10,11 @@ namespace HotelGestSystem.Domain.Receptionist.Entities
 {
     public class Room
     {
+        private readonly IHabitacionRepository _repository;
+
 
         private RoomState _state;
+
         public string Number { get; set; }
         public string CustomId { get; set; }
         public TypeRoom CategoryRoom { get; set; }
@@ -25,6 +29,18 @@ namespace HotelGestSystem.Domain.Receptionist.Entities
         public void SwitchStateTo(RoomState newState)
         {
             _state = newState;
+        }
+
+        public List<Room> ObtenerHabitaciones()
+        {
+
+            return new List<Room>(); 
+    
+        }
+
+        public void AgregarHabitacion(Room room)
+        {
+
         }
 
 

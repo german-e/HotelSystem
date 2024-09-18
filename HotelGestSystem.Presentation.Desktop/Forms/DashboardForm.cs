@@ -82,14 +82,18 @@ namespace HotelGestSystem.Presentation.Desktop.Forms
             info.BackColor = Color.Green;
             info.Dock = DockStyle.Fill;
             info.Margin = new Padding(5);
+            info.Height = 50;
             tableLayoutPanel2.Controls.Add(info);
+            
             tableLayoutPanel2.SetCellPosition(info, new TableLayoutPanelCellPosition(5, 1));
             tableLayoutPanel2.SetColumnSpan(info, 3);
+            
 
             StayInfo info2 = new StayInfo();
             info2.BackColor = Color.YellowGreen;
             info2.Dock = DockStyle.Fill;
             info2.Margin = new Padding(5);
+            info2.Height = 50;
             tableLayoutPanel2.Controls.Add(info2);
             tableLayoutPanel2.SetCellPosition(info2, new TableLayoutPanelCellPosition(3, 2));
             tableLayoutPanel2.SetColumnSpan(info2, 5);
