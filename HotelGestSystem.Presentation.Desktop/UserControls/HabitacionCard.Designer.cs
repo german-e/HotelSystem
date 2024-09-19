@@ -1,6 +1,6 @@
 ﻿namespace HotelGestSystem.Presentation.Desktop.UserControls
 {
-    partial class CardRoom
+    partial class HabitacionCard
     {
         /// <summary> 
         /// Variable del diseñador necesaria.

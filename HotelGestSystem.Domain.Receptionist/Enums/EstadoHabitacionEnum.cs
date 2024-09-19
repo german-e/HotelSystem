@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HotelGestSystem.Presentation.Desktop.Enums
+namespace HotelGestSystem.Domain.Receptionist.Enums
 {
-    public enum RoomStatus
+    public enum EstadoHabitacionEnum
     {
         Occupied = 1,
         Vacancy,

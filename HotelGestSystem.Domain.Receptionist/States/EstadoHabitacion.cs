@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace HotelGestSystem.Domain.Receptionist.States
 {
-    public abstract class RoomState
+    public abstract class EstadoHabitacion
     {
         
-        public abstract string ShowState();
+        public abstract string MostrarEstado();
 
         public abstract void Handle();
        

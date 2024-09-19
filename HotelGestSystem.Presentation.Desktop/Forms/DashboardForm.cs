@@ -25,9 +25,9 @@ namespace HotelGestSystem.Presentation.Desktop.Forms
             ListRoomsGrid();
 
 
-            RoomInfo roomInfoAvailable = new RoomInfo("Disponible", 10, Color.DarkSeaGreen);
-            RoomInfo roomInfoOccupied = new RoomInfo("Ocupadas", 10, Color.Crimson);
-            RoomInfo roomInfoOutService = new RoomInfo("Fuera de Servicio", 10, Color.DarkGray);
+            InfoHabitacion roomInfoAvailable = new InfoHabitacion("Disponible", 10, Color.DarkSeaGreen);
+            InfoHabitacion roomInfoOccupied = new InfoHabitacion("Ocupadas", 10, Color.Crimson);
+            InfoHabitacion roomInfoOutService = new InfoHabitacion("Fuera de Servicio", 10, Color.DarkGray);
             
             roomInfoAvailable.Margin = new Padding(10);
             roomInfoOccupied.Margin = new Padding(10);
@@ -64,10 +64,10 @@ namespace HotelGestSystem.Presentation.Desktop.Forms
         }
         private void ListRoomsCard()
         {
-            CardRoom room1 = new CardRoom(Color.LightGreen, "01", "Simple", Enums.RoomStatus.Occupied);
-            CardRoom room2 = new CardRoom(Color.LightGreen, "02", "Simple", Enums.RoomStatus.Vacancy);
-            CardRoom room3 = new CardRoom(Color.LightGreen, "03", "Triple", Enums.RoomStatus.Occupied);
-            CardRoom room4 = new CardRoom(Color.LightGreen, "04", "Doble", Enums.RoomStatus.Occupied);
+            HabitacionCard room1 = new HabitacionCard(Color.LightGreen, "01", "Simple", Enums.EstadoHabitacion.Occupied);
+            HabitacionCard room2 = new HabitacionCard(Color.LightGreen, "02", "Simple", Enums.EstadoHabitacion.Vacancy);
+            HabitacionCard room3 = new HabitacionCard(Color.LightGreen, "03", "Triple", Enums.EstadoHabitacion.Occupied);
+            HabitacionCard room4 = new HabitacionCard(Color.LightGreen, "04", "Doble", Enums.EstadoHabitacion.Occupied);
 
 
             panelRoomView.Controls.Add(room1);
@@ -78,7 +78,7 @@ namespace HotelGestSystem.Presentation.Desktop.Forms
 
         private void ListRoomsGrid()
         {
-            StayInfo info = new StayInfo();
+            EstadiaInfo info = new EstadiaInfo();
             info.BackColor = Color.Green;
             info.Dock = DockStyle.Fill;
             info.Margin = new Padding(5);
@@ -89,7 +89,7 @@ namespace HotelGestSystem.Presentation.Desktop.Forms
             tableLayoutPanel2.SetColumnSpan(info, 3);
             
 
-            StayInfo info2 = new StayInfo();
+            EstadiaInfo info2 = new EstadiaInfo();
             info2.BackColor = Color.YellowGreen;
             info2.Dock = DockStyle.Fill;
             info2.Margin = new Padding(5);

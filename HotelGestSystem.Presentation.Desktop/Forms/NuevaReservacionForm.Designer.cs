@@ -1,6 +1,6 @@
 ﻿namespace HotelGestSystem.Presentation.Desktop.Forms
 {
-    partial class NewReservationForm
+    partial class NuevaReservacionForm
     {
         /// <summary>
         /// Required designer variable.

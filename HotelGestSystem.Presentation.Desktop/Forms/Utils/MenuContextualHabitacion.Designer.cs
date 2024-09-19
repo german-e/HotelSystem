@@ -1,6 +1,6 @@
 ﻿namespace HotelGestSystem.Presentation.Desktop.Forms.Utils
 {
-    partial class MenuContextualRoom
+    partial class MenuContextualHabitacion
     {
         /// <summary>
         /// Required designer variable.

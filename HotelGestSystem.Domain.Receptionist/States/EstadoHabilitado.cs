@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HotelGestSystem.Domain.Receptionist.States
 {
-    public class AvailableState : RoomState
+    public class EstadoHabilitado : EstadoHabitacion
     {
         public override void Handle()
         {
@@ -15,7 +15,7 @@ namespace HotelGestSystem.Domain.Receptionist.States
 
         
 
-        public override string ShowState()
+        public override string MostrarEstado()
         {
             return "Disponible";
         }

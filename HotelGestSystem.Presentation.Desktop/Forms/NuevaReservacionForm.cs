@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace HotelGestSystem.Presentation.Desktop.Forms
 {
-    public partial class NewReservationForm : Form
+    public partial class NuevaReservacionForm : Form
     {
-        public NewReservationForm()
+        public NuevaReservacionForm()
         {
             InitializeComponent();
         }

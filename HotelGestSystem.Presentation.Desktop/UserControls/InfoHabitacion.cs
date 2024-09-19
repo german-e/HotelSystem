@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace HotelGestSystem.Presentation.Desktop.UserControls
 {
-    public partial class RoomInfo : UserControl
+    public partial class InfoHabitacion : UserControl
     {
 
         public string Status { get; set; }
@@ -18,7 +18,7 @@ namespace HotelGestSystem.Presentation.Desktop.UserControls
         public Color Color { get; set; }
         
 
-        public RoomInfo(string status, int total, Color color)
+        public InfoHabitacion(string status, int total, Color color)
         {
             InitializeComponent();
 

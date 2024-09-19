@@ -1,6 +1,6 @@
 ﻿namespace HotelGestSystem.Presentation.Desktop.Forms
 {
-    partial class CheckAvailableForm
+    partial class ConsultarDisponibilidadForm
     {
         /// <summary>
         /// Required designer variable.

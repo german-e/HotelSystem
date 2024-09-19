@@ -10,18 +10,18 @@ using System.Windows.Forms;
 
 namespace HotelGestSystem.Presentation.Desktop.Forms
 {
-    public partial class CheckAvailableForm : Form
+    public partial class ConsultarDisponibilidadForm : Form
     {
 
         public DateTime DateCheckFrom { get; set; }
         public DateTime DateCheckTo { get; set; }
         public string RoomType { get; set; }
-        public CheckAvailableForm()
+        public ConsultarDisponibilidadForm()
         {
             InitializeComponent();
         }
 
-        public CheckAvailableForm(DateTime dateCheckFrom, DateTime dateCheckTo, string roomType)
+        public ConsultarDisponibilidadForm(DateTime dateCheckFrom, DateTime dateCheckTo, string roomType)
         {
             InitializeComponent();
 

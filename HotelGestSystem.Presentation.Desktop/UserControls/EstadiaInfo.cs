@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace HotelGestSystem.Presentation.Desktop.UserControls
 {
-    public partial class StayInfo : UserControl
+    public partial class EstadiaInfo : UserControl
     {
-        public StayInfo()
+        public EstadiaInfo()
         {
             InitializeComponent();
         }
@@ -22,7 +22,7 @@ namespace HotelGestSystem.Presentation.Desktop.UserControls
         {
             
                 
-            MenuContextualReservation contextual = new();
+            MenuContextualReservacion contextual = new();
             contextual.Top = e.X;
             contextual.ShowDialog();
         }

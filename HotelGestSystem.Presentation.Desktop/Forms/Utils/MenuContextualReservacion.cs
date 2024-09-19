@@ -8,21 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace HotelGestSystem.Presentation.Desktop.UserControls
+namespace HotelGestSystem.Presentation.Desktop.Forms.Utils
 {
-    public partial class RoomAvailable : UserControl
+    public partial class MenuContextualReservacion : Form
     {
-        public RoomAvailable(RoomInfo info, int daysToShow = 15  )
+        public MenuContextualReservacion()
         {
             InitializeComponent();
-
-
-
-            tableLayoutPanel.ColumnCount = daysToShow;
-
-
         }
-
-        
     }
 }

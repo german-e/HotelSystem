@@ -12,14 +12,14 @@ using System.Windows.Forms;
 
 namespace HotelGestSystem.Presentation.Desktop.UserControls
 {
-    public partial class CardRoom : UserControl
+    public partial class HabitacionCard : UserControl
     {
         public Color Color { get; set; }
         public string RoomNumber { get; set; }
         public string RoomCategory { get; set; }
         public Image Icon { get; set; }
-        public RoomStatus RoomStatus { get; set; }
-        public CardRoom(Color color, string roomNumber, string roomCategory, RoomStatus status)
+        public EstadoHabitacion RoomStatus { get; set; }
+        public HabitacionCard(Color color, string roomNumber, string roomCategory, EstadoHabitacion status)
         {
             InitializeComponent();
 
@@ -38,12 +38,12 @@ namespace HotelGestSystem.Presentation.Desktop.UserControls
 
             switch (RoomStatus)
             {
-                case RoomStatus.Occupied:
+                case EstadoHabitacion.Occupied:
                     BackColor = Color.FromArgb(125, 10, 10);
                     Icon = Properties.Resources.room_occupied_red;
                     panelStatus.BackColor = Color.FromArgb(191, 49, 49);
                     break;
-                case RoomStatus.Vacancy:
+                case EstadoHabitacion.Vacancy:
                     BackColor = Color.FromArgb(54, 94, 50);
                     panelStatus.BackColor = Color.FromArgb(129, 162, 99);
                     Icon = Properties.Resources.room_empty_green;
@@ -61,7 +61,7 @@ namespace HotelGestSystem.Presentation.Desktop.UserControls
 
         private void CardRoom_Click(object sender, EventArgs e)
         {
-            MenuContextualRoom menu = new MenuContextualRoom(RoomStatus);
+            MenuContextualHabitacion menu = new MenuContextualHabitacion(RoomStatus);
             menu.ShowDialog();
         }
     }

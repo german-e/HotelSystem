@@ -9,8 +9,8 @@ namespace HotelGestSystem.Domain.Receptionist.Contracts
 {
     public interface IHabitacionRepository
     {
-        List<Room> ObtenerTodas();
-        Room ObtenerHabitacionPorNumero(string numero);
+        List<Habitacion> ObtenerTodas();
+        Habitacion ObtenerHabitacionPorNumero(string numero);
         void AgregarHabitacion();
         
         

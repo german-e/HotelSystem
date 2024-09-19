@@ -22,7 +22,7 @@ namespace HotelGestSystem.Presentation.Desktop
 
         private void btnCheckRoomAvailable_Click(object sender, EventArgs e)
         {
-            CheckAvailableForm checkAvailableForm = new CheckAvailableForm(dateCheckRoomAvailableFrom.Value, dateCheckRoomAvailableTo.Value, cboCheckRoomAvailableType.SelectedText);
+            ConsultarDisponibilidadForm checkAvailableForm = new ConsultarDisponibilidadForm(dateCheckRoomAvailableFrom.Value, dateCheckRoomAvailableTo.Value, cboCheckRoomAvailableType.SelectedText);
 
             checkAvailableForm.Show();
         }

@@ -16,19 +16,19 @@ namespace HotelGestSystem.Data.Repositories
             throw new NotImplementedException();
         }
 
-        public Room ObtenerHabitacionPorNumero(string numero)
+        public Domain.Receptionist.Entities.Habitacion ObtenerHabitacionPorNumero(string numero)
         {
             throw new NotImplementedException();
         }
 
-        public List<Room> ObtenerTodas()
+        public List<Domain.Receptionist.Entities.Habitacion> ObtenerTodas()
         {
-            List<Habitacion> habs = new List<Habitacion>();
+            List<Model.Habitacion> habs = new List<Model.Habitacion>();
 
-            List<Room> result = new List<Room>();
+            List<Domain.Receptionist.Entities.Habitacion> result = new List<Domain.Receptionist.Entities.Habitacion>();
 
             //Datos de muestra
-            Habitacion hab1 = new Habitacion();
+            Model.Habitacion hab1 = new Model.Habitacion();
             hab1.Id = 1;
             hab1.Camas = 1;
             hab1.CapacidadPersonas = 2;
@@ -36,14 +36,14 @@ namespace HotelGestSystem.Data.Repositories
             hab1.Precio = 12542.25M;
             hab1.CategoriaId = 1;
 
-            Habitacion hab2 = new Habitacion();
+            Model.Habitacion hab2 = new Model.Habitacion();
             hab2.Camas = 2;
             hab2.CapacidadPersonas = 4;
             hab2.Descripcion = "Habitación Doble, 1 cama matrimonial y una cama 1 plaza - baños - TV AA";
             hab2.Precio = 2255.25M;
             hab2.CategoriaId = 2;
 
-            Habitacion hab3 = new Habitacion();
+            Model.Habitacion hab3 = new Model.Habitacion();
             hab3.Camas = 2;
             hab3.CapacidadPersonas = 3;
             hab3.Descripcion = "Habitación 3 cama 1 plaza - baños - TV AA";
@@ -60,7 +60,7 @@ namespace HotelGestSystem.Data.Repositories
                 result.Add(new Room
                 {
                     Number = hab.Numero,
-                    CategoryRoom = new TypeRoom { Capacity = 2, Description = hab.Descripcion, Name = "Simple", Price = 125.25M },
+                    CategoryRoom = new Domain.Receptionist.Entities.Categoria { Capacidad = 2, Descripcion = hab.Descripcion, Nombre = "Simple", Precio = 125.25M },
                     Description = hab.Descripcion,
                     Floor = 0, CustomId = "102A"
                     

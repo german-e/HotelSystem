@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace HotelGestSystem.Presentation.Desktop.Forms.Utils
 {
-    public partial class MenuContextualRoom : Form
+    public partial class MenuContextualHabitacion : Form
     {
 
         public string HabitacionNro { get; set; }
@@ -20,7 +20,7 @@ namespace HotelGestSystem.Presentation.Desktop.Forms.Utils
         
 
 
-        public MenuContextualRoom(RoomStatus roomStatus)
+        public MenuContextualHabitacion(EstadoHabitacion roomStatus)
         {
             InitializeComponent();
 
@@ -28,10 +28,10 @@ namespace HotelGestSystem.Presentation.Desktop.Forms.Utils
 
             switch (roomStatus)
             {
-                case RoomStatus.Occupied:
+                case EstadoHabitacion.Occupied:
                     Opciones.AddRange(new string[] { "Agregar Servicio", "Cambiar Habitacion", "Check-out" });
                     break;
-                case RoomStatus.Vacancy:
+                case EstadoHabitacion.Vacancy:
                     Opciones.AddRange(["Reservar", "Cambiar Estado"]);
                     break;
             }
