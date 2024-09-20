@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HotelGestSystem.Domain.Receptionist.Contracts;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,18 @@ namespace HotelGestSystem.Presentation.Desktop.Forms
 {
     public partial class NuevaReservacionForm : Form
     {
-        public NuevaReservacionForm()
+        private readonly IHabitacionRepository _repository;
+
+        public NuevaReservacionForm(IHabitacionRepository repository)
         {
             InitializeComponent();
+            _repository = repository;
+
+
+
+           
+
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -25,6 +35,14 @@ namespace HotelGestSystem.Presentation.Desktop.Forms
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void NuevaReservacionForm_Load(object sender, EventArgs e)
+        {
+            cboHabitacion.DataSource = _repository.ObtenerTodas();
+            cboHabitacion.DisplayMember = "Numero";
+            cboHabitacion.ValueMember = "Id";
+            cboHabitacion.SelectedIndex = -1;
         }
     }
 }

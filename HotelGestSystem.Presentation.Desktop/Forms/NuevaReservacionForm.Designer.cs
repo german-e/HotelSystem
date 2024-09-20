@@ -30,6 +30,8 @@
         {
             monthCalendar1 = new MonthCalendar();
             groupBox1 = new GroupBox();
+            label11 = new Label();
+            cboHabitacion = new ComboBox();
             button1 = new Button();
             label3 = new Label();
             label1 = new Label();
@@ -50,13 +52,11 @@
             textBox1 = new TextBox();
             label6 = new Label();
             groupBox3 = new GroupBox();
-            label11 = new Label();
-            comboBox2 = new ComboBox();
-            textBox5 = new TextBox();
-            label5 = new Label();
+            comboBox1 = new ComboBox();
             textBox6 = new TextBox();
             label10 = new Label();
-            comboBox1 = new ComboBox();
+            textBox5 = new TextBox();
+            label5 = new Label();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numericUpDown2).BeginInit();
@@ -78,7 +78,7 @@
             // groupBox1
             // 
             groupBox1.Controls.Add(label11);
-            groupBox1.Controls.Add(comboBox2);
+            groupBox1.Controls.Add(cboHabitacion);
             groupBox1.Controls.Add(button1);
             groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(label1);
@@ -91,6 +91,24 @@
             groupBox1.TabIndex = 2;
             groupBox1.TabStop = false;
             groupBox1.Text = "Datos de Reserva";
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.ForeColor = SystemColors.WindowText;
+            label11.Location = new Point(16, 79);
+            label11.Name = "label11";
+            label11.Size = new Size(58, 15);
+            label11.TabIndex = 11;
+            label11.Text = "Nro. Hab.";
+            // 
+            // cboHabitacion
+            // 
+            cboHabitacion.FormattingEnabled = true;
+            cboHabitacion.Location = new Point(82, 75);
+            cboHabitacion.Name = "cboHabitacion";
+            cboHabitacion.Size = new Size(171, 23);
+            cboHabitacion.TabIndex = 10;
             // 
             // button1
             // 
@@ -293,40 +311,13 @@
             groupBox3.TabStop = false;
             groupBox3.Text = "Datos del Pago";
             // 
-            // label11
+            // comboBox1
             // 
-            label11.AutoSize = true;
-            label11.ForeColor = SystemColors.WindowText;
-            label11.Location = new Point(16, 79);
-            label11.Name = "label11";
-            label11.Size = new Size(58, 15);
-            label11.TabIndex = 11;
-            label11.Text = "Nro. Hab.";
-            // 
-            // comboBox2
-            // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(82, 75);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(171, 23);
-            comboBox2.TabIndex = 10;
-            // 
-            // textBox5
-            // 
-            textBox5.Location = new Point(123, 105);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(120, 23);
-            textBox5.TabIndex = 10;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.ForeColor = SystemColors.WindowText;
-            label5.Location = new Point(6, 108);
-            label5.Name = "label5";
-            label5.Size = new Size(95, 15);
-            label5.TabIndex = 9;
-            label5.Text = "Pago Anticipado";
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(123, 159);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(120, 23);
+            comboBox1.TabIndex = 12;
             // 
             // textBox6
             // 
@@ -345,15 +336,24 @@
             label10.TabIndex = 11;
             label10.Text = "Forma de Pago";
             // 
-            // comboBox1
+            // textBox5
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(123, 159);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(120, 23);
-            comboBox1.TabIndex = 12;
+            textBox5.Location = new Point(123, 105);
+            textBox5.Name = "textBox5";
+            textBox5.Size = new Size(120, 23);
+            textBox5.TabIndex = 10;
             // 
-            // NewReservationForm
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.ForeColor = SystemColors.WindowText;
+            label5.Location = new Point(6, 108);
+            label5.Name = "label5";
+            label5.Size = new Size(95, 15);
+            label5.TabIndex = 9;
+            label5.Text = "Pago Anticipado";
+            // 
+            // NuevaReservacionForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -363,9 +363,10 @@
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             ForeColor = SystemColors.WindowText;
-            Name = "NewReservationForm";
+            Name = "NuevaReservacionForm";
             Padding = new Padding(5);
             Text = "NewReservationForm";
+            Load += NuevaReservacionForm_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             groupBox2.ResumeLayout(false);
@@ -401,7 +402,7 @@
         private Button button1;
         private Button button2;
         private Label label11;
-        private ComboBox comboBox2;
+        private ComboBox cboHabitacion;
         private ComboBox comboBox1;
         private TextBox textBox6;
         private Label label10;

@@ -32,11 +32,12 @@
             flowLayoutRoomQty = new FlowLayoutPanel();
             panelRoomView = new FlowLayoutPanel();
             panel1 = new Panel();
-            button2 = new Button();
-            button1 = new Button();
             panel2 = new Panel();
             tableLayoutPanel2 = new TableLayoutPanel();
             label16 = new Label();
+            radioButton1 = new RadioButton();
+            radioButton2 = new RadioButton();
+            radioButton3 = new RadioButton();
             tableLayoutPanel1.SuspendLayout();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
@@ -85,33 +86,14 @@
             // panel1
             // 
             panel1.BackColor = Color.White;
-            panel1.Controls.Add(button2);
-            panel1.Controls.Add(button1);
+            panel1.Controls.Add(radioButton3);
+            panel1.Controls.Add(radioButton2);
+            panel1.Controls.Add(radioButton1);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(3, 53);
             panel1.Name = "panel1";
             panel1.Size = new Size(1191, 34);
             panel1.TabIndex = 3;
-            // 
-            // button2
-            // 
-            button2.Location = new Point(167, 0);
-            button2.Margin = new Padding(0);
-            button2.Name = "button2";
-            button2.Size = new Size(145, 34);
-            button2.TabIndex = 0;
-            button2.Text = "button1";
-            button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            button1.Location = new Point(0, 0);
-            button1.Margin = new Padding(0);
-            button1.Name = "button1";
-            button1.Size = new Size(145, 34);
-            button1.TabIndex = 0;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
             // 
             // panel2
             // 
@@ -152,12 +134,6 @@
             tableLayoutPanel2.Padding = new Padding(5);
             tableLayoutPanel2.RowCount = 1;
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 40F));
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
             tableLayoutPanel2.Size = new Size(1191, 245);
             tableLayoutPanel2.TabIndex = 5;
             // 
@@ -172,6 +148,41 @@
             label16.Text = "Room N°";
             label16.TextAlign = ContentAlignment.MiddleCenter;
             // 
+            // radioButton1
+            // 
+            radioButton1.Appearance = Appearance.Button;
+            radioButton1.AutoSize = true;
+            radioButton1.Location = new Point(63, 3);
+            radioButton1.Name = "radioButton1";
+            radioButton1.Size = new Size(58, 25);
+            radioButton1.TabIndex = 0;
+            radioButton1.Text = "1er Piso";
+            radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            radioButton2.Appearance = Appearance.Button;
+            radioButton2.AutoSize = true;
+            radioButton2.Location = new Point(127, 3);
+            radioButton2.Name = "radioButton2";
+            radioButton2.Size = new Size(62, 25);
+            radioButton2.TabIndex = 1;
+            radioButton2.Text = "2do Piso";
+            radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton3
+            // 
+            radioButton3.Appearance = Appearance.Button;
+            radioButton3.AutoSize = true;
+            radioButton3.Checked = true;
+            radioButton3.Location = new Point(9, 3);
+            radioButton3.Name = "radioButton3";
+            radioButton3.Size = new Size(48, 25);
+            radioButton3.TabIndex = 2;
+            radioButton3.TabStop = true;
+            radioButton3.Text = "Todos";
+            radioButton3.UseVisualStyleBackColor = true;
+            // 
             // DashboardForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -183,6 +194,7 @@
             Load += DashboardForm_Load;
             tableLayoutPanel1.ResumeLayout(false);
             panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             tableLayoutPanel2.ResumeLayout(false);
@@ -195,10 +207,11 @@
         private FlowLayoutPanel flowLayoutRoomQty;
         private FlowLayoutPanel panelRoomView;
         private Panel panel1;
-        private Button button2;
-        private Button button1;
         private Panel panel2;
         private TableLayoutPanel tableLayoutPanel2;
         private Label label16;
+        private RadioButton radioButton2;
+        private RadioButton radioButton1;
+        private RadioButton radioButton3;
     }
 }
