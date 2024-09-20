@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HotelGestSystem.Aplication.DTOs
 {
-    public class ReservationDto
+    public class ReservacionDto
     {
         public DateTime Desde { get; set; }
         public DateTime Hasta { get; set; }
@@ -26,7 +26,7 @@ namespace HotelGestSystem.Aplication.DTOs
 
         public  GuestDto Huesped { get; set; }
 
-        public RoomDto Room { get; set; }
+        public HabitacionDto Room { get; set; }
 
         public decimal Prepayment { get; set; }
     }

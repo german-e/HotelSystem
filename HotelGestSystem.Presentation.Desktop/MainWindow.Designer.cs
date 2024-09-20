@@ -30,29 +30,29 @@
         {
             tableLayoutPanel1 = new TableLayoutPanel();
             MainConteiner = new Panel();
+            panelTop = new Panel();
+            pictureBox1 = new PictureBox();
             flowLayoutPanel1 = new FlowLayoutPanel();
-            button4 = new Button();
+            btnMenuNuevaReservacion = new Button();
             button3 = new Button();
             button1 = new Button();
             button2 = new Button();
-            panelTop = new Panel();
-            pictureBox1 = new PictureBox();
             panelCheckRoomAvailable = new Panel();
-            dateCheckRoomAvailableFrom = new DateTimePicker();
-            dateCheckRoomAvailableTo = new DateTimePicker();
-            btnCheckRoomAvailable = new Button();
-            cboCheckRoomAvailableType = new ComboBox();
-            pictureBox2 = new PictureBox();
-            pictureBox3 = new PictureBox();
             pictureBox4 = new PictureBox();
+            pictureBox3 = new PictureBox();
+            pictureBox2 = new PictureBox();
+            cboCheckRoomAvailableType = new ComboBox();
+            btnCheckRoomAvailable = new Button();
+            dateCheckRoomAvailableTo = new DateTimePicker();
+            dateCheckRoomAvailableFrom = new DateTimePicker();
             tableLayoutPanel1.SuspendLayout();
-            flowLayoutPanel1.SuspendLayout();
             panelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            flowLayoutPanel1.SuspendLayout();
             panelCheckRoomAvailable.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -82,10 +82,30 @@
             MainConteiner.Size = new Size(763, 530);
             MainConteiner.TabIndex = 0;
             // 
+            // panelTop
+            // 
+            panelTop.Controls.Add(pictureBox1);
+            panelTop.Dock = DockStyle.Fill;
+            panelTop.Location = new Point(203, 3);
+            panelTop.Name = "panelTop";
+            panelTop.Size = new Size(763, 39);
+            panelTop.TabIndex = 2;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            pictureBox1.Image = Properties.Resources.user;
+            pictureBox1.Location = new Point(723, 7);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(37, 27);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
+            // 
             // flowLayoutPanel1
             // 
             flowLayoutPanel1.BackColor = Color.DarkRed;
-            flowLayoutPanel1.Controls.Add(button4);
+            flowLayoutPanel1.Controls.Add(btnMenuNuevaReservacion);
             flowLayoutPanel1.Controls.Add(button3);
             flowLayoutPanel1.Controls.Add(button1);
             flowLayoutPanel1.Controls.Add(button2);
@@ -97,18 +117,19 @@
             flowLayoutPanel1.Size = new Size(194, 575);
             flowLayoutPanel1.TabIndex = 1;
             // 
-            // button4
+            // btnMenuNuevaReservacion
             // 
-            button4.BackColor = Color.PaleVioletRed;
-            button4.FlatAppearance.BorderSize = 0;
-            button4.FlatStyle = FlatStyle.Flat;
-            button4.Location = new Point(0, 55);
-            button4.Margin = new Padding(0, 55, 5, 3);
-            button4.Name = "button4";
-            button4.Size = new Size(192, 35);
-            button4.TabIndex = 5;
-            button4.Text = "Nueva Reservación";
-            button4.UseVisualStyleBackColor = false;
+            btnMenuNuevaReservacion.BackColor = Color.PaleVioletRed;
+            btnMenuNuevaReservacion.FlatAppearance.BorderSize = 0;
+            btnMenuNuevaReservacion.FlatStyle = FlatStyle.Flat;
+            btnMenuNuevaReservacion.Location = new Point(0, 55);
+            btnMenuNuevaReservacion.Margin = new Padding(0, 55, 5, 3);
+            btnMenuNuevaReservacion.Name = "btnMenuNuevaReservacion";
+            btnMenuNuevaReservacion.Size = new Size(192, 35);
+            btnMenuNuevaReservacion.TabIndex = 5;
+            btnMenuNuevaReservacion.Text = "Nueva Reservación";
+            btnMenuNuevaReservacion.UseVisualStyleBackColor = false;
+            btnMenuNuevaReservacion.Click += BtnMenuNuevaReservacion_Click;
             // 
             // button3
             // 
@@ -150,26 +171,6 @@
             button2.Text = "Huéspedes";
             button2.UseVisualStyleBackColor = false;
             // 
-            // panelTop
-            // 
-            panelTop.Controls.Add(pictureBox1);
-            panelTop.Dock = DockStyle.Fill;
-            panelTop.Location = new Point(203, 3);
-            panelTop.Name = "panelTop";
-            panelTop.Size = new Size(763, 39);
-            panelTop.TabIndex = 2;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            pictureBox1.Image = Properties.Resources.user;
-            pictureBox1.Location = new Point(723, 7);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(37, 27);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
-            // 
             // panelCheckRoomAvailable
             // 
             panelCheckRoomAvailable.BackColor = Color.DarkSalmon;
@@ -185,23 +186,43 @@
             panelCheckRoomAvailable.Size = new Size(189, 183);
             panelCheckRoomAvailable.TabIndex = 6;
             // 
-            // dateCheckRoomAvailableFrom
+            // pictureBox4
             // 
-            dateCheckRoomAvailableFrom.CustomFormat = "dddd dd MMM";
-            dateCheckRoomAvailableFrom.Format = DateTimePickerFormat.Custom;
-            dateCheckRoomAvailableFrom.Location = new Point(40, 21);
-            dateCheckRoomAvailableFrom.Name = "dateCheckRoomAvailableFrom";
-            dateCheckRoomAvailableFrom.Size = new Size(137, 23);
-            dateCheckRoomAvailableFrom.TabIndex = 0;
+            pictureBox4.Image = Properties.Resources.check_out_black;
+            pictureBox4.Location = new Point(13, 56);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(21, 24);
+            pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox4.TabIndex = 6;
+            pictureBox4.TabStop = false;
             // 
-            // dateCheckRoomAvailableTo
+            // pictureBox3
             // 
-            dateCheckRoomAvailableTo.CustomFormat = "dddd dd MMM";
-            dateCheckRoomAvailableTo.Format = DateTimePickerFormat.Custom;
-            dateCheckRoomAvailableTo.Location = new Point(40, 56);
-            dateCheckRoomAvailableTo.Name = "dateCheckRoomAvailableTo";
-            dateCheckRoomAvailableTo.Size = new Size(137, 23);
-            dateCheckRoomAvailableTo.TabIndex = 1;
+            pictureBox3.Image = Properties.Resources.check_in;
+            pictureBox3.Location = new Point(13, 20);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(21, 24);
+            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox3.TabIndex = 5;
+            pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = Properties.Resources.room_hotel;
+            pictureBox2.Location = new Point(13, 90);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(21, 24);
+            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox2.TabIndex = 4;
+            pictureBox2.TabStop = false;
+            // 
+            // cboCheckRoomAvailableType
+            // 
+            cboCheckRoomAvailableType.FormattingEnabled = true;
+            cboCheckRoomAvailableType.Location = new Point(40, 91);
+            cboCheckRoomAvailableType.Name = "cboCheckRoomAvailableType";
+            cboCheckRoomAvailableType.Size = new Size(137, 23);
+            cboCheckRoomAvailableType.TabIndex = 3;
             // 
             // btnCheckRoomAvailable
             // 
@@ -215,43 +236,23 @@
             btnCheckRoomAvailable.UseVisualStyleBackColor = false;
             btnCheckRoomAvailable.Click += btnCheckRoomAvailable_Click;
             // 
-            // cboCheckRoomAvailableType
+            // dateCheckRoomAvailableTo
             // 
-            cboCheckRoomAvailableType.FormattingEnabled = true;
-            cboCheckRoomAvailableType.Location = new Point(40, 91);
-            cboCheckRoomAvailableType.Name = "cboCheckRoomAvailableType";
-            cboCheckRoomAvailableType.Size = new Size(137, 23);
-            cboCheckRoomAvailableType.TabIndex = 3;
+            dateCheckRoomAvailableTo.CustomFormat = "dddd dd MMM";
+            dateCheckRoomAvailableTo.Format = DateTimePickerFormat.Custom;
+            dateCheckRoomAvailableTo.Location = new Point(40, 56);
+            dateCheckRoomAvailableTo.Name = "dateCheckRoomAvailableTo";
+            dateCheckRoomAvailableTo.Size = new Size(137, 23);
+            dateCheckRoomAvailableTo.TabIndex = 1;
             // 
-            // pictureBox2
+            // dateCheckRoomAvailableFrom
             // 
-            pictureBox2.Image = Properties.Resources.room_hotel;
-            pictureBox2.Location = new Point(13, 90);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(21, 24);
-            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox2.TabIndex = 4;
-            pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            pictureBox3.Image = Properties.Resources.check_in;
-            pictureBox3.Location = new Point(13, 20);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(21, 24);
-            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox3.TabIndex = 5;
-            pictureBox3.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            pictureBox4.Image = Properties.Resources.check_out_black;
-            pictureBox4.Location = new Point(13, 56);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(21, 24);
-            pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox4.TabIndex = 6;
-            pictureBox4.TabStop = false;
+            dateCheckRoomAvailableFrom.CustomFormat = "dddd dd MMM";
+            dateCheckRoomAvailableFrom.Format = DateTimePickerFormat.Custom;
+            dateCheckRoomAvailableFrom.Location = new Point(40, 21);
+            dateCheckRoomAvailableFrom.Name = "dateCheckRoomAvailableFrom";
+            dateCheckRoomAvailableFrom.Size = new Size(137, 23);
+            dateCheckRoomAvailableFrom.TabIndex = 0;
             // 
             // MainWindow
             // 
@@ -263,13 +264,13 @@
             Text = "Hoter Gest Sistema";
             WindowState = FormWindowState.Maximized;
             tableLayoutPanel1.ResumeLayout(false);
-            flowLayoutPanel1.ResumeLayout(false);
             panelTop.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            flowLayoutPanel1.ResumeLayout(false);
             panelCheckRoomAvailable.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
         }
 
@@ -281,7 +282,7 @@
         private Button button3;
         private Button button1;
         private Button button2;
-        private Button button4;
+        private Button btnMenuNuevaReservacion;
         private Panel panelTop;
         private PictureBox pictureBox1;
         private Panel panelCheckRoomAvailable;

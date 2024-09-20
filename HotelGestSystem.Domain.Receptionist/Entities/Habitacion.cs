@@ -14,7 +14,7 @@ namespace HotelGestSystem.Domain.Receptionist.Entities
 
 
         private EstadoHabitacion _state;
-
+        public int Id { get; set; }
         public string Numero { get; set; }
         public string Codigo { get; set; }
         public Categoria Categoria { get; set; }
@@ -22,6 +22,10 @@ namespace HotelGestSystem.Domain.Receptionist.Entities
 
         public string Descripcion { get; set; }
 
+        public Habitacion()
+        {
+            
+        }
         public Habitacion(EstadoHabitacion state)
         {
             _state = state;
@@ -44,5 +48,10 @@ namespace HotelGestSystem.Domain.Receptionist.Entities
         }
 
 
+
+        public override string ToString()
+        {
+            return $"Hab. {Numero}";
+        }
     }
 }

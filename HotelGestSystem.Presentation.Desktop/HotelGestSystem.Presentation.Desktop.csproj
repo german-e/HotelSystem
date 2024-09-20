@@ -16,7 +16,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\HotelGestSystem.Aplication\HotelGestSystem.Aplication.csproj" />
+    <ProjectReference Include="..\HotelGestSystem.Data\HotelGestSystem.Data.csproj" />
   </ItemGroup>
 
   <ItemGroup>

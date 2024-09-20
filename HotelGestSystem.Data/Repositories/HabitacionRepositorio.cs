@@ -30,6 +30,7 @@ namespace HotelGestSystem.Data.Repositories
             //Datos de muestra
             Model.Habitacion hab1 = new Model.Habitacion();
             hab1.Id = 1;
+            hab1.Numero = "1A";
             hab1.Camas = 1;
             hab1.CapacidadPersonas = 2;
             hab1.Descripcion = "Habitación Simple para dos personas, 1 cama matrimonial - baños - TV AA";
@@ -37,6 +38,8 @@ namespace HotelGestSystem.Data.Repositories
             hab1.CategoriaId = 1;
 
             Model.Habitacion hab2 = new Model.Habitacion();
+            hab2.Id = 2;
+            hab2.Numero = "2A";
             hab2.Camas = 2;
             hab2.CapacidadPersonas = 4;
             hab2.Descripcion = "Habitación Doble, 1 cama matrimonial y una cama 1 plaza - baños - TV AA";
@@ -44,6 +47,8 @@ namespace HotelGestSystem.Data.Repositories
             hab2.CategoriaId = 2;
 
             Model.Habitacion hab3 = new Model.Habitacion();
+            hab3.Id = 3;
+            hab3.Numero = "3A";
             hab3.Camas = 2;
             hab3.CapacidadPersonas = 3;
             hab3.Descripcion = "Habitación 3 cama 1 plaza - baños - TV AA";
@@ -57,12 +62,13 @@ namespace HotelGestSystem.Data.Repositories
 
             foreach (var hab in habs)
             {
-                result.Add(new Room
+                result.Add(new Domain.Receptionist.Entities.Habitacion
                 {
-                    Number = hab.Numero,
-                    CategoryRoom = new Domain.Receptionist.Entities.Categoria { Capacidad = 2, Descripcion = hab.Descripcion, Nombre = "Simple", Precio = 125.25M },
-                    Description = hab.Descripcion,
-                    Floor = 0, CustomId = "102A"
+                    Id = hab.Id,
+                    Numero = hab.Numero,
+                    Categoria = new Domain.Receptionist.Entities.Categoria { Capacidad = 2, Descripcion = hab.Descripcion, Nombre = "Simple", Precio = 125.25M },
+                    Descripcion = hab.Descripcion,
+                    Piso = 0, Codigo = "102A"
                     
                 });
             }
