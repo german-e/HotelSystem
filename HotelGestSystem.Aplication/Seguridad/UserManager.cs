@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HotelGestSystem.Domain.Shared.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -43,5 +44,18 @@ namespace HotelGestSystem.Aplication.Seguridad
 
             return true;
         }
+
+
+        public bool TienePermiso(Usuario usuario, string permiso)
+        {
+            if (usuario.EsAdmin) return true;
+
+            foreach (Rol rol in usuario.Roles)
+            {
+                rol.Per
+            }
+            
+        }
+
     }
 }
