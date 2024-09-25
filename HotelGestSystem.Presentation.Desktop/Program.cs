@@ -1,7 +1,9 @@
+using HotelGestSystem.Data.Context;
 using HotelGestSystem.Data.Repositories;
 using HotelGestSystem.Domain.Receptionist.Contracts;
 using HotelGestSystem.Presentation.Desktop.Forms;
 using Microsoft.Extensions.DependencyInjection;
+using System.Configuration;
 
 namespace HotelGestSystem.Presentation.Desktop
 {
@@ -37,6 +39,10 @@ namespace HotelGestSystem.Presentation.Desktop
             services.AddTransient<MainWindow>();
             services.AddTransient<NuevaReservacionForm>();
             services.AddTransient<LoginForm>();
+
+            services.AddTransient<IDbContext>( provider => 
+                new SqlServerDbContext( ConfigurationManager.ConnectionStrings["Default"].ConnectionString ) 
+                );
         }
     }
 }
